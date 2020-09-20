@@ -1,0 +1,60 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+#mainButton:hover{
+	-fx-opacity: 0.9;
+}
+#mainButton:pressed{
+	-fx-background-color: #4d80e4;
+	-fx-border-style: solid ;
+	-fx-border-radius: 2px;
+	-fx-border-color: rgba(153,50,204,0.8);
+	-fx-border-width: 2px;
+	-fx-opacity: 1;
+}
+.elements{
+	-fx-background-color: #4d80e4;
+	-fx-border-style: solid ;
+	-fx-border-radius: 2px;
+	-fx-padding: 1px;
+    -fx-border-insets: 1px;
+    -fx-background-insets: 1px;
+    -fx-font-size: 30px;
+    -fx-font-family: Minecraft;
+    -fx-fill: teal ;
+}
+.elements:hover{
+	-fx-opacity: 0.8;
+}
+.elements:disabled > * {
+  -fx-opacity: 1.0 ;
+}
+.elements:disabled {
+  -fx-opacity: 1.0 ;
+}
+#lion:pressed{
+	-fx-background-color: #4d80e4;
+	-fx-border-style: solid ;
+	-fx-border-radius: 2px;
+	-fx-border-color: AQUAMARINE;
+}
+#lion:hover {
+    -fx-background-color: 
+        rgba(0,0,0,0.08),
+        linear-gradient(#9a9a9a, #909090),
+        linear-gradient(white 0%, #f3f3f3 50%, #ececec 51%, #f2f2f2 100%);
+    -fx-background-insets: 0 0 -1 0,0,1;
+    -fx-background-radius: 5,5,4;
+    -fx-padding: 3 30 3 30;
+    -fx-text-fill: #242d35;
+    -fx-font-size: 14px;
+}
+#lion {
+    -fx-background-color: 
+        rgba(0,0,0,0.08),
+        linear-gradient(#5a61af, #51536d),
+        linear-gradient(#e4fbff 0%,#cee6fb 10%, #a5d3fb 50%, #88c6fb 51%, #d5faff 100%);
+    -fx-background-insets: 0 0 -1 0,0,1;
+    -fx-background-radius: 5,5,4;
+    -fx-padding: 3 30 3 30;
+    -fx-text-fill: #242d35;
+    -fx-font-size: 14px;
+}

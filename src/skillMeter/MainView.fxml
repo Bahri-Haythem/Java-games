@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="709.0" prefWidth="709.0" style="-fx-background-color: #dff6f0;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="skillMeter.Controller">
+   <children>
+      <AnchorPane fx:id="anchorPane2" layoutX="83.0" layoutY="22.0" opacity="0.9" prefHeight="461.0" prefWidth="476.0" style="-fx-background-color: #dff6f0;" visible="false" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="22.0">
+         <children>
+            <Label fx:id="label1" alignment="CENTER" prefHeight="146.0" prefWidth="363.0" text="Game finished" textAlignment="CENTER" textFill="#24da3d" visible="false" wrapText="true" AnchorPane.bottomAnchor="452.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Minecraft" size="54.0" />
+               </font>
+            </Label>
+            <Label fx:id="label2" alignment="CENTER" layoutX="72.0" prefHeight="72.0" prefWidth="262.0" text="your final score is :" visible="false" wrapText="true" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+               <font>
+                  <Font name="Minecraft" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="button" layoutX="254.0" layoutY="526.0" mnemonicParsing="false" onAction="#activate" onMouseClicked="#playSound" visible="false" />
+      <Button fx:id="startButton" alignment="CENTER" layoutX="231.0" layoutY="511.0" mnemonicParsing="false" onAction="#remove" prefHeight="80.0" prefWidth="170.0" style="-fx-background-color: #46b3e6;" stylesheets="@application.css" text="Start" textAlignment="CENTER" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="231.0" AnchorPane.rightAnchor="238.0">
+         <textFill>
+            <LinearGradient endX="0.8428571428571429" endY="0.37619047619047613" startX="0.21904761904761902" startY="0.0714285714285714">
+               <stops>
+                  <Stop color="#1231f8" />
+                  <Stop color="#7513ff" offset="0.5900383141762452" />
+                  <Stop color="#410dff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="Roboto" size="37.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.55" specularConstant="0.83" specularExponent="40.0" surfaceScale="2.2">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="254.3" color="#d5d5ee" elevation="49.19" />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <Label fx:id="fLabel1" alignment="CENTER" cache="true" graphicTextGap="0.0" layoutX="72.0" layoutY="24.0" prefHeight="89.0" prefWidth="476.0" text="SkillMeter" textAlignment="CENTER" textFill="#2e279d" AnchorPane.leftAnchor="71.0" AnchorPane.rightAnchor="71.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font name="System Bold" size="59.0" />
+         </font>
+      </Label>
+      <Label fx:id="fLabel2" alignment="CENTER" layoutX="92.0" layoutY="137.0" prefHeight="317.0" prefWidth="476.0" text="In this game you must press the bomb as fast as possible. The score will be shown at the end." textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="217.0" AnchorPane.leftAnchor="71.0" AnchorPane.rightAnchor="71.0" AnchorPane.topAnchor="137.0">
+         <font>
+            <Font name="Minecraft" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

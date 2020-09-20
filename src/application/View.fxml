@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchor" prefHeight="662.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <MenuBar fx:id="myMenuBar" layoutX="-7.0" prefHeight="25.0" prefWidth="746.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="options">
+            <items>
+                  <Menu mnemonicParsing="false" text="Sound">
+                     <items>
+                        <CheckMenuItem fx:id="soundON" mnemonicParsing="false" onAction="#setONSelected" text="ON" />
+                        <CheckMenuItem fx:id="soundOFF" mnemonicParsing="false" onAction="#setOFFSelected" text="OFF" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="allowed errors in demineur">
+                     <items>
+                        <RadioMenuItem fx:id="rmi1" mnemonicParsing="false" onAction="#setErrorNumber" text="1" />
+                        <RadioMenuItem fx:id="rmi2" mnemonicParsing="false" onAction="#setErrorNumber" text="2" />
+                        <RadioMenuItem fx:id="rmi3" mnemonicParsing="false" onAction="#setErrorNumber" text="3" />
+                        <RadioMenuItem fx:id="rmi4" mnemonicParsing="false" onAction="#setErrorNumber" text="4" />
+                        <RadioMenuItem fx:id="rmi5" mnemonicParsing="false" onAction="#setErrorNumber" text="5" />
+                        <RadioMenuItem fx:id="rmi6" mnemonicParsing="false" onAction="#setErrorNumber" text="6" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="number of bombs in skillMeter">
+                     <items>
+                        <RadioMenuItem fx:id="Rrmi1" mnemonicParsing="false" onAction="#setRepetitionNumber" text="1" />
+                        <RadioMenuItem fx:id="Rrmi2" mnemonicParsing="false" onAction="#setRepetitionNumber" text="2" />
+                        <RadioMenuItem fx:id="Rrmi3" mnemonicParsing="false" onAction="#setRepetitionNumber" text="3" />
+                        <RadioMenuItem fx:id="Rrmi4" mnemonicParsing="false" onAction="#setRepetitionNumber" text="4" />
+                        <RadioMenuItem fx:id="Rrmi5" mnemonicParsing="false" onAction="#setRepetitionNumber" text="5" />
+                        <RadioMenuItem fx:id="Rrmi6" mnemonicParsing="false" onAction="#setRepetitionNumber" text="6" />
+                        <RadioMenuItem fx:id="Rrmi7" mnemonicParsing="false" onAction="#setRepetitionNumber" text="7" />
+                        <RadioMenuItem fx:id="Rrmi8" mnemonicParsing="false" onAction="#setRepetitionNumber" text="8" />
+                        <RadioMenuItem fx:id="Rrmi9" mnemonicParsing="false" onAction="#setRepetitionNumber" text="9" />
+                     </items>
+                  </Menu>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Game menu">
+            <items>
+                  <MenuItem fx:id="mi0" mnemonicParsing="false" onAction="#mainMenu" text="MainMenu" />
+              <MenuItem fx:id="mi1" mnemonicParsing="false" onAction="#loadScene1" text="Demineur" />
+                  <MenuItem fx:id="mi2" mnemonicParsing="false" onAction="#loadScene2" text="Paint" />
+                  <MenuItem fx:id="mi3" mnemonicParsing="false" onAction="#loadScene3" text="SkillMeter" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="anchor" layoutY="24.0" prefHeight="638.0" prefWidth="739.0" style="-fx-background-color: #dff6f0;" stylesheets="@application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0">
+         <children>
+            <Label alignment="CENTER" cache="true" graphicTextGap="0.0" layoutX="112.0" layoutY="21.0" prefHeight="105.0" prefWidth="522.0" text="Choose your game" textAlignment="CENTER" textFill="#2e279d" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="21.0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="55.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#ffb8b8" height="50.65" radius="21.119999999999997" spread="1.0" width="35.83" />
+               </effect>
+            </Label>
+            <ImageView fx:id="iv1" fitHeight="150.0" fitWidth="200.0" layoutX="64.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="299.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="475.0" AnchorPane.topAnchor="190.0" />
+            <Button fx:id="button1" layoutX="87.0" layoutY="396.0" mnemonicParsing="false" onAction="#loadScene1" prefHeight="46.0" prefWidth="96.0" style="-fx-background-color: #46b3e6;" styleClass="startButton" text="Play" AnchorPane.bottomAnchor="197.0" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="556.0" AnchorPane.topAnchor="396.0">
+               <font>
+                  <Font name="Verdana Bold" size="22.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.3761904761904762" endY="0.8428571428571427" startY="0.0714285714285714">
+                     <stops>
+                        <Stop color="#a705ff" />
+                        <Stop color="#410dff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <Lighting diffuseConstant="1.74" specularConstant="1.04" specularExponent="26.98" surfaceScale="2.66">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="241.74" color="#d5d5ee" elevation="36.63" />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <ImageView fx:id="iv2" fitHeight="150.0" fitWidth="200.0" layoutX="295.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="299.0" AnchorPane.leftAnchor="295.0" AnchorPane.rightAnchor="244.0" AnchorPane.topAnchor="190.0" />
+            <Button fx:id="button2" layoutX="323.0" layoutY="396.0" mnemonicParsing="false" onAction="#loadScene2" prefHeight="46.0" prefWidth="96.0" style="-fx-background-color: #46b3e6;" styleClass="startButton" text="Play" AnchorPane.bottomAnchor="197.0" AnchorPane.leftAnchor="323.0" AnchorPane.rightAnchor="320.0" AnchorPane.topAnchor="396.0">
+               <font>
+                  <Font name="Verdana Bold" size="22.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.7571428571428571" endY="0.9142857142857141" startY="0.3619047619047619">
+                     <stops>
+                        <Stop color="#1231f8" />
+                        <Stop color="#821fed" offset="0.5938697318007659" />
+                        <Stop color="#410dff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <Lighting diffuseConstant="1.74" specularConstant="1.04" specularExponent="26.98" surfaceScale="2.66">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="241.74" color="#d5d5ee" elevation="36.63" />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <ImageView fx:id="iv3" fitHeight="150.0" fitWidth="200.0" layoutX="525.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="299.0" AnchorPane.leftAnchor="525.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="190.0" />
+            <Button fx:id="button3" layoutX="560.0" layoutY="396.0" mnemonicParsing="false" onAction="#loadScene3" prefHeight="46.0" prefWidth="96.0" style="-fx-background-color: #46b3e6;" styleClass="startButton" text="Play" AnchorPane.bottomAnchor="196.0" AnchorPane.leftAnchor="560.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="396.0">
+               <font>
+                  <Font name="Verdana Bold" size="22.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.7571428571428571" endY="0.9142857142857141" startY="0.3619047619047619">
+                     <stops>
+                        <Stop color="#1231f8" />
+                        <Stop color="#a21eee" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <Lighting diffuseConstant="1.74" specularConstant="1.04" specularExponent="26.98" surfaceScale="2.66">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="241.74" color="#d5d5ee" elevation="36.63" />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button fx:id="aboutButton" layoutX="534.0" layoutY="559.0" mnemonicParsing="false" onAction="#showAbout" prefHeight="47.0" prefWidth="158.0" style="-fx-background-color: #46b3e6;" styleClass="startButton" text=" about">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.7571428571428571" endY="0.9142857142857141" startY="0.3619047619047619">
+                     <stops>
+                        <Stop color="#1231f8" />
+                        <Stop color="#a21eee" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <Lighting diffuseConstant="1.74" specularConstant="1.04" specularExponent="26.98" surfaceScale="2.66">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="241.74" color="#d5d5ee" elevation="36.63" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="aboutPane" layoutY="24.0" prefHeight="649.0" prefWidth="749.0" style="-fx-background-color: #dff6f0;" stylesheets="@application.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0">
+         <children>
+            <Label alignment="CENTER" cache="true" graphicTextGap="0.0" layoutX="155.0" layoutY="21.0" prefHeight="105.0" prefWidth="431.0" text="About this game" textAlignment="CENTER" textFill="#2e279d" AnchorPane.leftAnchor="155.0" AnchorPane.rightAnchor="153.0" AnchorPane.topAnchor="21.0">
+               <font>
+                  <Font name="System Bold" size="46.0" />
+               </font>
+            </Label>
+            <Label fx:id="label" alignment="CENTER" layoutX="53.0" layoutY="150.0" prefHeight="308.0" prefWidth="630.0" text="This is a game done by Haythem Bahri  as a project made with javafx. Enjoy" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="53.0">
+               <font>
+                  <Font name="Minecraft" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="returnButton" layoutX="534.0" layoutY="559.0" mnemonicParsing="false" onAction="#showMain" prefHeight="47.0" prefWidth="158.0" style="-fx-background-color: #46b3e6;" styleClass="startButton" text="return" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="534.0" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="552.0">
+               <font>
+                  <Font name="Verdana Bold" size="22.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.7571428571428571" endY="0.9142857142857141" startY="0.3619047619047619">
+                     <stops>
+                        <Stop color="#1231f8" />
+                        <Stop color="#a21eee" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <Lighting diffuseConstant="1.74" specularConstant="1.04" specularExponent="26.98" surfaceScale="2.66">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="241.74" color="#d5d5ee" elevation="36.63" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="625.0" prefWidth="913.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paint.FXMLDocumentController">
+    <children>
+      <Canvas fx:id="TheCanvas" height="646.0" width="806.0" AnchorPane.bottomAnchor="-21.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="107.0" AnchorPane.topAnchor="0.0" />
+      <Canvas fx:id="canvasGo" height="646.0" onMouseDragged="#onMouseDraggedListener" onMousePressed="#onMousePressedListener" onMouseReleased="#onMouseReleaseListener" width="806.0" AnchorPane.bottomAnchor="-21.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="107.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane fx:id="anchor" prefHeight="625.0" prefWidth="816.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <AnchorPane layoutX="31.0" layoutY="38.0" prefHeight="545.0" prefWidth="722.0" styleClass="anchor">
+               <children>
+                  <Label alignment="CENTER" layoutX="230.0" layoutY="56.0" prefHeight="66.0" prefWidth="263.0" text="HELP MENU" textFill="#2e279d">
+                     <font>
+                        <Font name="Verdana Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="48.0" layoutY="131.0" prefHeight="97.0" prefWidth="630.0" text="You can paint with this application by using the buttons aside. Choose fill or stroke for drawing shapes and choose the size of the eraser/stroke with the slide bar.To erase choose the delete menu then eraser and to completly delete everything press clean " textFill="#2e279d" wrapText="true">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="105.0" layoutY="243.0" prefHeight="52.0" prefWidth="386.0" text="draw a rectangle" textFill="#2e279d">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="ImageRect" fitHeight="32.0" fitWidth="32.0" layoutX="73.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label layoutX="105.0" layoutY="295.0" prefHeight="52.0" prefWidth="386.0" text="draw a line" textFill="#2e279d">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="ImageLine" fitHeight="32.0" fitWidth="32.0" layoutX="73.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label layoutX="105.0" layoutY="347.0" prefHeight="52.0" prefWidth="386.0" text="draw a circle" textFill="#2e279d">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="ImageCircle" fitHeight="32.0" fitWidth="32.0" layoutX="73.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label layoutX="105.0" layoutY="399.0" prefHeight="52.0" prefWidth="386.0" text="draw with a pencil" textFill="#2e279d">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="ImagePencil" fitHeight="32.0" fitWidth="32.0" layoutX="73.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label layoutX="480.0" layoutY="479.0" prefHeight="52.0" prefWidth="198.0" text="Press help again to exit" textFill="#2e279d">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <ToolBar layoutX="676.0" orientation="VERTICAL" prefHeight="534.0" prefWidth="128.0" style="-fx-background-color: #dff6f0;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <Button fx:id="rectButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#setRectangleAsCurrentShape" text="Rectangle" />
+            <Button fx:id="lineButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#setLineAsCurrentShape" text="Line" />
+            <Button fx:id="ovlButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#setOvalAsCurrentShape" text="Oval" />
+            <Button fx:id="pencButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#setFreeDesign" text="pencil" />
+            <MenuButton mnemonicParsing="false" prefHeight="29.0" prefWidth="108.0" text="delete">
+              <items>
+                <MenuItem fx:id="eraser" mnemonicParsing="false" onAction="#setErase" text="eraser" />
+                <MenuItem fx:id="clean" mnemonicParsing="false" onAction="#clearCanvas" text="clean" />
+              </items>
+            </MenuButton>
+            <ColorPicker fx:id="colorPick" prefHeight="25.0" prefWidth="108.0" />
+            <RadioButton fx:id="strokeRB" mnemonicParsing="false" prefHeight="17.0" prefWidth="108.0" selected="true" text="Stroke">
+               <toggleGroup>
+                  <ToggleGroup fx:id="shapes" />
+               </toggleGroup>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="fillRB" mnemonicParsing="false" prefHeight="17.0" prefWidth="108.0" text="Fill" toggleGroup="$shapes">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></RadioButton>
+            <Label text="eraser/stroke size">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </Label>
+            <Slider fx:id="sizeSlider" prefHeight="28.0" prefWidth="118.0" showTickMarks="true" />
+            <Button mnemonicParsing="false" onAction="#setHelp" text="help" />          
+        </items>
+      </ToolBar>          
+   </children>
+</AnchorPane>
